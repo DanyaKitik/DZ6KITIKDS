@@ -23,6 +23,7 @@ class Autoloader
             $prefix = array_shift($path);
             if (!empty($this->prefixes[$prefix])) {
                 $file = $this->prefixes[$prefix] . '/' . implode('/', $path) . '.php';
+                var_dump($file);
                 require $file;
                 return true;
             }
